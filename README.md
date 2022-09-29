@@ -1,5 +1,5 @@
 # Reminders Tool 
-This repo contains the backend application that allows employees to create reminders, and return them to some dashboard. A user can create a reminder for a given date X, and at midnight of date X they should begin to see the reminder they created being returned to their dashboard. 
+This repo contains the backend application that allows employees to create reminders, and return them to some dashboard.
 
 This tool should provide the following functionality to the user: 
 1. Allow the employee to create a reminder with some text that will appear on a given date 
