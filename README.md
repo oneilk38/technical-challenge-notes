@@ -206,4 +206,9 @@ There is no system tests testing all integrations - should have block box tests 
 ## Developer Experience 
 Some quality of life improvements that would make developing easier for teammates : 
 - Run the API from inside a docker container - the DB is running inside a docker container but not the API, this actually led to me having a host of errors when trying to run the service for the first time due to mismatched java versions between the project and my machine 
-- linting rules so that code formatting is consistent 
+- linting rules so that code formatting is consistent
+
+
+## Some small nits / improvements 
+Some DB fields are named the same as their type - e.g `timestamp` and `text` - it is bad to shadow type names 
+We could potentially change the `isAcknowledged` and `isNotification` sent columns from booleans to nullable datetimes : `acknowledgedAt` and `notificationSentAt` - this would give us better auditability for trying to debug any issues 
