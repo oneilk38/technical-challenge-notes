@@ -135,6 +135,10 @@ still active and their timestamp is less than now. This means if you had a remin
 checking the dashboard at 9am, it would not be returned. This breaks the requirement of having a reminder show up on the 
 dashboard at `00:00am`. 
 
+### Timezone bug 
+I think timezones are causing a bug. For my machine atleast, instant.now() is returning GMT, where as I am in GMT+1. I created two reminder this morning at 8:20am GMT+1, one with a timestamp of 8:15am GMT+1 and one with a timestamp of 7:15am GMT+1 - only the second reminder was returned as the value for Instant.now() on my machine is GMT , not GMT+1. 
+There needs to be better handling around user timezones. 
+
 ### findAt in occurrences 
 The query for returning all unacknowledged occurrences has a comment mentioning it suppose to return all unacknowledged
 occurrence, however it is missing a check on the isAcknowledged field. 
