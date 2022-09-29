@@ -119,7 +119,7 @@ Given all the above, imagine we needed to implement the ability to delete a remi
   - `OccurrencesUseCase.deleteAllOccurrences` - if the original reminder was set up to have a recurring rule, we also want to delete any occurrences also
 - In our repositories, we want to new commands to execute: 
   - `RemindersRepository.deleteReminder` - this is the abstracted function that the PostgresRemindersRepository will implement 
-  - `RemindersRepository.deleteOccurrences` - this is the abstracted function that the PostgresOccurrencesRepository will implement
+  - `OccurrencesRepository.deleteOccurrences` - this is the abstracted function that the PostgresOccurrencesRepository will implement
 
 
 
